@@ -1,298 +1,415 @@
-/* Подключи шрифт в <head> (Montserrat или SF Pro) */
+/* === СТИЛИ CSS === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Montserrat', 'SF Pro Display', Arial, sans-serif;
-  margin: 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
-  color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    transition: all 0.3s ease;
 }
 
-header {
-  background: rgba(245, 247, 250, 0.97);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 16px rgba(39, 44, 49, 0.07);
-  border-bottom: 1px solid #e3e8ee;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 32px;
-  font-size: 1em;
-  color: #5c5c5c;
-  background: transparent;
+/* Header и навигация */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0; padding: 0;
-  justify-content: center;
-  gap: 32px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
-nav a {
-  color: #1c2331;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 22px;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
-  font-size: 1.08em;
+.nav-brand h1 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
-nav a:hover {
-  background: #eaf0fa;
-  color: #0066ff;
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
 }
 
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero секция */
 .hero {
-  background: linear-gradient(120deg, #eaf0fa 0%, #f8fafc 100%);
-  color: #222;
-  text-align: center;
-  padding: 64px 10px 50px 10px;
-  border-radius: 0 0 40px 40px;
-  box-shadow: 0 8px 32px rgba(39, 44, 49, 0.05);
-  margin-bottom: 32px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 70vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
-.hero h1 {
-  font-size: 2.7em;
-  font-weight: 700;
-  margin-bottom: 18px;
-  letter-spacing: -2px;
+.hero-content {
+    padding: 2rem;
+    color: white;
 }
 
-.hero p {
-  font-size: 1.22em;
-  margin-bottom: 22px;
-  color: #4e5d6c;
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.search-form {
-  margin-top: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
-.search-form input,
-.search-form select {
-  padding: 14px 18px;
-  border-radius: 10px;
-  border: 1px solid #e3e8ee;
-  background: #fff;
-  font-size: 1em;
-  outline: none;
-  box-shadow: 0 2px 10px rgba(39, 44, 49, 0.03);
-  transition: box-shadow 0.2s, border-color 0.2s;
+.cta-button {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 
-.search-form input:focus,
-.search-form select:focus {
-  border-color: #0066ff;
-  box-shadow: 0 4px 16px rgba(0,102,255,0.08);
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
 }
 
-.search-form button {
-  background: linear-gradient(90deg, #0066ff 40%, #60b2ff 100%);
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  padding: 14px 28px;
-  font-size: 1.08em;
-  box-shadow: 0 2px 10px rgba(39, 44, 49, 0.07);
-  transition: background 0.18s, transform 0.18s;
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-.search-form button:hover {
-  background: linear-gradient(90deg, #60b2ff 0%, #0066ff 100%);
-  transform: translateY(-2px) scale(1.03);
+/* Секция направлений */
+.destinations {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
 }
 
-.hot-tours {
-  padding: 40px 0;
-  background: transparent;
-  text-align: center;
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
 }
 
-.cards {
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-  flex-wrap: wrap;
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.card {
-  background: #fff;
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(39, 44, 49, 0.08);
-  overflow: hidden;
-  width: 300px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  position: relative;
-  border: 1px solid #e3e8ee;
+.destination-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px) scale(1.04);
-  box-shadow: 0 20px 48px rgba(39,44,49,0.12);
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.card img {
-  width: 100%; height: 180px; object-fit: cover;
-  border-bottom: 1px solid #e3e8ee;
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-content {
-  padding: 24px 20px;
+    padding: 1.5rem;
 }
 
 .card-content h3 {
-  margin: 0 0 12px 0;
-  font-size: 1.17em;
-  font-weight: 700;
-  color: #1c2331;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
 }
 
 .card-content p {
-  margin: 0 0 10px 0;
-  font-size: 1.05em;
-  color: #0066ff;
-  font-weight: 600;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
 }
 
-.card-content .discount {
-  color: #fff;
-  background: linear-gradient(90deg,#0066ff 40%,#60b2ff 100%);
-  padding: 4px 18px;
-  border-radius: 16px;
-  font-size: 0.95em;
-  font-weight: 700;
-  position: absolute;
-  top: 22px; right: 22px;
-  box-shadow: 0 2px 8px rgba(0,102,255,0.07);
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e74c3c;
+    display: block;
+    margin-bottom: 1rem;
 }
 
-.card-content button {
-  margin-top: 14px;
-  background: #f8fafc;
-  color: #0066ff;
-  border: 1px solid #0066ff;
-  border-radius: 8px;
-  padding: 9px 16px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.14s, color 0.14s;
+.book-btn {
+    width: 100%;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.card-content button:hover {
-  background: #0066ff;
-  color: #fff;
+.book-btn:hover {
+    background: linear-gradient(45deg, #2980b9, #1abc9c);
+    transform: scale(1.05);
 }
 
-.popular-countries {
-  padding: 30px 0;
-  background: transparent;
-  text-align: center;
+/* Секция преимуществ */
+.features {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
 }
 
-.countries-list {
-  display: flex;
-  gap: 22px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 18px;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
 }
 
-.country {
-  background: #fff;
-  color: #222;
-  border-radius: 20px;
-  font-weight: bold;
-  padding: 10px 32px;
-  box-shadow: 0 2px 8px rgba(0,102,255,0.04);
-  border: 1px solid #e3e8ee;
-  font-size: 1.08em;
-  transition: box-shadow 0.18s;
+.feature-item {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.country:hover {
-  box-shadow: 0 8px 20px rgba(0,102,255,0.10);
-  color: #0066ff;
+.feature-item:hover {
+    transform: translateY(-5px);
 }
 
-.reviews {
-  padding: 30px 0;
-  background: transparent;
-  text-align: center;
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.review-slider {
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-  flex-wrap: wrap;
+/* Форма заявки */
+.quick-form {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
 }
 
-.review {
-  background: #fff;
-  border-radius: 18px;
-  padding: 22px 28px;
-  max-width: 340px;
-  box-shadow: 0 2px 14px rgba(39, 44, 49, 0.08);
-  border: 1px solid #e3e8ee;
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.review span {
-  display: block;
-  margin-top: 14px;
-  color: #0066ff;
-  font-weight: bold;
-  font-size: 1.04em;
+.form input, .form select {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
-footer {
-  background: rgba(245, 247, 250, 0.97);
-  color: #222;
-  text-align: center;
-  padding: 30px 10px 18px 10px;
-  border-top: 1px solid #e3e8ee;
-  box-shadow: 0 -2px 12px rgba(39,44,49,0.04);
+.submit-btn {
+    grid-column: 1 / -1;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
 }
 
-footer .cards img {
-  width: 46px;
-  margin: 0 12px;
+.submit-btn:hover {
+    background: #c0392b;
 }
 
-footer a {
-  color: #0066ff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.18s;
+/* Таблица цен */
+.pricing-table {
+    padding: 4rem 0;
+    background: #f8f9fa;
 }
 
-footer a:hover {
-  color: #222;
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 900px) {
-  .search-form, .cards, .countries-list, .review-slider {
-    flex-direction: column;
+.price-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.price-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.price-table tr:hover {
+    background: #f1f3f5;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e74c3c;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 18px;
-  }
-  .card {
-    width: 93vw;
-  }
-  .hero {
-    border-radius: 0 0 16px 16px;
-  }
+    border-top: 1px solid #34495e;
+    padding-top: 2rem;
+}
+
+.theme-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: #2980b9;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.dark-theme .destination-card,
+.dark-theme .feature-item,
+.dark-theme .price-table {
+    background: #2d3748;
+    color: #f0f0f0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(102, 126, 234, 0.95);
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
