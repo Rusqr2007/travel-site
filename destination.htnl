@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Направления — Aurora Travel</title>
+    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <div class="nav-brand">
+                <a href="index.html"><img src="img/logo.svg" alt="Aurora Travel" class="logo"></a>
+                <span class="site-title">Aurora Travel</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li><a href="destinations.html" class="nav-link active">Направления</a></li>
+                <li><a href="index.html#about" class="nav-link">О нас</a></li>
+                <li><a href="index.html#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+            <button class="hamburger" id="hamburger">&#9776;</button>
+        </nav>
+    </header>
+    <main>
+        <section class="destinations-preview">
+            <h2 class="section-title">Все направления</h2>
+            <ul class="cities-list">
+                <!-- Повтори блоки для всех направлений -->
+                <li>
+                    <figure>
+                        <img src="img/maldives.jpg" alt="Мальдивы">
+                        <figcaption>
+                            <h3>Мальдивы</h3>
+                            <p>Райские острова, белый песок и лазурная вода. Идеально для романтики и релакса.</p>
+                            <span class="price">от 350 000 ₸</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/italy.jpg" alt="Рим, Италия">
+                        <figcaption>
+                            <h3>Рим</h3>
+                            <p>Древняя архитектура, кухня, искусство.</p>
+                            <span class="price">от 220 000 ₸</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/bali.jpg" alt="Бали">
+                        <figcaption>
+                            <h3>Бали</h3>
+                            <p>Тропики, серфинг, закаты, духовность.</p>
+                            <span class="price">от 180 000 ₸</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/thailand.jpg" alt="Бангкок, Таиланд">
+                        <figcaption>
+                            <h3>Бангкок</h3>
+                            <p>Храмы, уличная еда, ночная жизнь.</p>
+                            <span class="price">от 160 000 ₸</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/barcelona.jpg" alt="Барселона">
+                        <figcaption>
+                            <h3>Барселона</h3>
+                            <p>Гауди, пляжи, страсть к жизни.</p>
+                            <span class="price">от 260 000 ₸</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/dubai.jpg" alt="Дубай">
+                        <figcaption>
+                            <h3>Дубай</h3>
+                            <p>Небоскребы, шопинг, пустыня.</p>
+                            <span class="price">от 310 000 ₸</span>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <h3>Контакты</h3>
+                <ul>
+                    <li>Телефон: +7 (777) 456-12-34</li>
+                    <li>Email: info@aurora-travel.kz</li>
+                    <li>Адрес: Алматы, пр. Достык 123</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Соцсети</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Режим работы</h3>
+                <ul>
+                    <li>Пн-Пт: 10:00 — 19:00</li>
+                    <li>Сб: 11:00 — 16:00</li>
+                    <li>Вс: выходной</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Aurora Travel. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
