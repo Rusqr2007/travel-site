@@ -1,173 +1,189 @@
-/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #222;
 }
 
-.header {
-    background-color: #fff;
-    color: #333;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
+header {
+  background: #2b4263;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  background: #1e2a3a;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0; padding: 0;
+  justify-content: center;
+  gap: 24px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+nav a:hover {
+  background: #38598b;
+}
+.hero {
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  color: #fff;
+  text-align: center;
+  padding: 40px 10px 30px 10px;
+}
+.search-form {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.search-form input, .search-form select, .search-form button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
+}
+.search-form button {
+  background: #2b4263;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.search-form button:hover {
+  background: #38598b;
+}
+.hot-tours {
+  padding: 40px 0;
+  background: #fff;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  gap:24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: #f4f7fb;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.07);
+  overflow: hidden;
+  width: 260px;
+  transition: transform 0.2s;
+  position: relative;
+}
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(44,62,80,0.12);
+}
+.card img {
+  width: 100%; height: 140px; object-fit: cover;
+}
+.card-content {
+  padding: 18px 12px;
+}
+.card-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1em;
+}
+.card-content .discount {
+  color: #fff;
+  background: #e74c3c;
+  padding: 3px 10px;
+  border-radius: 16px;
+  font-size: 0.9em;
+  position: absolute;
+  top: 12px; right: 12px;
+}
+.card-content button {
+  margin-top: 10px;
+  background: #6dd5ed;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.popular-countries {
+  padding: 30px 0;
+  background: #eaf6fa;
+  text-align: center;
+}
+.countries-list {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.country {
+  background: #2b4263;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.reviews {
+  padding: 30px 0;
+  background: #fff;
+  text-align: center;
+}
+.review-slider {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.review {
+  background: #eaf6fa;
+  border-radius: 12px;
+  padding: 18px 22px;
+  max-width: 340px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+}
+.review span {
+  display: block;
+  margin-top: 10px;
+  color: #2b4263;
+  font-weight: bold;
+}
+footer {
+  background: #1e2a3a;
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px 18px 10px;
+}
+footer .cards img {
+  width: 50px;
+  margin: 0 8px;
+}
+footer a {
+  color: #6dd5ed;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .search-form, .cards, .countries-list, .review-slider {
+    flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #007bff;
-}
-
-.main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.main-nav a:hover {
-    color: #007bff;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    color: #007bff;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-/* Flexbox для карточек услуг */
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.service-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 25px;
-    width: 280px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.service-card h3 {
-    color: #555;
-    font-size: 20px;
-    margin-top: 0;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-.about-text-wrapper {
-    position: relative;
-    overflow: hidden;
-    height: 150px;
-    transition: height 0.5s ease-in-out;
-}
-
-.about-text-wrapper.expanded {
-    height: auto;
-}
-
-#read-more-btn {
-    display: block;
-    margin: 20px auto 0;
-    background: #5cb85c;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#read-more-btn:hover {
-    background: #4cae4c;
-}
-
-/* Стили для таблицы */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    text-align: left;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-}
-
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
-tr:nth-child(even) {
-    background-color: #fafafa;
-}
-
-.total-users {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    width: 98vw;
+  }
 }
