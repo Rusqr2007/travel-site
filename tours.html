@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши туры - Travel Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Наши туры</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="tours.html">Наши туры</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tour-list-section">
+            <h2>Выберите свое приключение</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Направление</th>
+                        <th>Длительность</th>
+                        <th>Цена</th>
+                        <th>Описание</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Париж</td>
+                        <td>7 дней / 6 ночей</td>
+                        <td>от 800€</td>
+                        <td>
+                            <button class="toggle-details">Подробнее</button>
+                            <div class="details-content" style="display: none;">
+                                <p>Романтический тур, включающий посещение Эйфелевой башни, Лувра и Собора Парижской Богоматери.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Токио</td>
+                        <td>10 дней / 9 ночей</td>
+                        <td>от 1500€</td>
+                        <td>
+                            <button class="toggle-details">Подробнее</button>
+                            <div class="details-content" style="display: none;">
+                                <p>Путешествие в мегаполис будущего с посещением древних храмов и живописных садов.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Рим</td>
+                        <td>5 дней / 4 ночи</td>
+                        <td>от 700€</td>
+                        <td>
+                            <button class="toggle-details">Подробнее</button>
+                            <div class="details-content" style="display: none;">
+                                <p>Исторический тур по Колизею, Римскому форуму и Ватикану.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel Site. Все права защищены.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery-code.js"></script>
+</body>
+</html>
