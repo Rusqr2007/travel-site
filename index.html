@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Travel Site</title>
+    <title>Наши туры - Travel Site</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>Путешествуйте с нами!</h1>
+        <h1>Наши туры</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -19,30 +19,53 @@
     </header>
 
     <main>
-        <section class="intro">
-            <h2>Откройте мир с нами!</h2>
-            <p>Мы предлагаем незабываемые туры по всему миру. Найдите свое идеальное приключение.</p>
-        </section>
-
-        <section id="featured-tours">
-            <h2>Популярные направления</h2>
-            <div class="tour-gallery">
-                <div class="gallery-item">
-                    <h3>Париж</h3>
-                    <img src="img/paris.jpg" alt="Вид на Париж">
-                    <p>Город света, романтики и искусства.</p>
-                </div>
-                <div class="gallery-item">
-                    <h3>Токио</h3>
-                    <img src="img/tokyo.jpg" alt="Вид на Токио">
-                    <p>Современный мегаполис и древние традиции.</p>
-                </div>
-                <div class="gallery-item">
-                    <h3>Рим</h3>
-                    <img src="img/rome.jpg" alt="Вид на Рим">
-                    <p>Вечный город с богатой историей и вкусной кухней.</p>
-                </div>
-            </div>
+        <section class="tour-list-section">
+            <h2>Выберите свое приключение</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Направление</th>
+                        <th>Длительность</th>
+                        <th>Цена</th>
+                        <th>Описание</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Париж</td>
+                        <td>7 дней / 6 ночей</td>
+                        <td>от 800€</td>
+                        <td>
+                            <button class="toggle-details">Подробнее</button>
+                            <div class="details-content" style="display: none;">
+                                <p>Романтический тур, включающий посещение Эйфелевой башни, Лувра и Собора Парижской Богоматери.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Токио</td>
+                        <td>10 дней / 9 ночей</td>
+                        <td>от 1500€</td>
+                        <td>
+                            <button class="toggle-details">Подробнее</button>
+                            <div class="details-content" style="display: none;">
+                                <p>Путешествие в мегаполис будущего с посещением древних храмов и живописных садов.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Рим</td>
+                        <td>5 дней / 4 ночи</td>
+                        <td>от 700€</td>
+                        <td>
+                            <button class="toggle-details">Подробнее</button>
+                            <div class="details-content" style="display: none;">
+                                <p>Исторический тур по Колизею, Римскому форуму и Ватикану.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
@@ -53,6 +76,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/jquery-code.js"></script>
-
 </body>
 </html>
