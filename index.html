@@ -1,110 +1,144 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Compass — Международный Туристический Агрегатор</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Nosrea Travel — Ваш эксперт в путешествиях</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header>
+    <div class="top-bar">
+      <span>Город: Алматы</span>
+      <span>₸</span>
+      <span>Русский</span>
+      <a href="tel:+77479158560">8 (747) 915-85-60</a>
+      <a class="whatsapp" href="https://wa.me/77479158560" target="_blank">WhatsApp</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Горящие туры</a></li>
+        <li><a href="#">Страны</a></li>
+        <li><a href="#">Туры</a></li>
+        <li><a href="#">Отели</a></li>
+        <li><a href="#">Круизы</a></li>
+        <li><a href="#">Сертификаты</a></li>
+        <li><a href="#">Клиентам</a></li>
+        <li><a href="#">Мои туры</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header class="header">
-        <div class="logo">Travel Compass</div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#stats">Статистика</a></li>
-            </ul>
-        </nav>
-    </header>
+  <section class="hero">
+    <h1>Nosrea Travel — Ваш эксперт по путешествиям</h1>
+    <p>Уже 17 лет отправляем людей в незабываемые приключения!</p>
+    <form class="search-form">
+      <input type="text" placeholder="Город вылета (например, Алматы)">
+      <input type="text" placeholder="Страна/курорт/отель">
+      <input type="date">
+      <select>
+        <option>7-9 дней</option>
+        <option>10-14 дней</option>
+      </select>
+      <select>
+        <option>1-5 звезд</option>
+        <option>5 звезд</option>
+      </select>
+      <select>
+        <option>2 взрослых</option>
+        <option>1 взрослый</option>
+        <option>С детьми</option>
+      </select>
+      <button type="submit">Найти тур</button>
+    </form>
+  </section>
 
-    <main>
-        <section class="services-section" id="services">
-            <h2>Международный Туристический Агрегатор</h2>
-            <p>Универсальная платформа для бронирования самых популярных туристических услуг по всему миру.</p>
+  <section class="hot-tours">
+    <h2>Горящие туры Nosrea Travel</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Египет">
+        <div class="card-content">
+          <h3>Египет — Sunrise Montemare Resort 5*</h3>
+          <p>от 125 000 тг</p>
+          <span class="discount">-40%</span>
+          <button>Посмотреть тур</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=800&q=80" alt="Турция">
+        <div class="card-content">
+          <h3>Турция — Nirvana Hotels</h3>
+          <p>от 176 000 тг</p>
+          <span class="discount">-38%</span>
+          <button>Посмотреть тур</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Мальдивы">
+        <div class="card-content">
+          <h3>Мальдивы — Paradise Island</h3>
+          <p>от 459 000 тг</p>
+          <span class="discount">-25%</span>
+          <button>Посмотреть тур</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=800&q=80" alt="Таиланд">
+        <div class="card-content">
+          <h3>Таиланд — Phuket Beach Resort</h3>
+          <p>от 237 000 тг</p>
+          <span class="discount">-30%</span>
+          <button>Посмотреть тур</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="services-container">
-                <div class="service-card" id="air-tickets">
-                    <h3>Авиабилеты</h3>
-                    <p>Дешевые авиабилеты от крупнейших авиакомпаний и агентств. Сэкономьте до 30% средств без наценок!</p>
-                    <a href="#" class="btn">Забронировать</a>
-                </div>
-                <div class="service-card" id="hotels">
-                    <h3>Отели</h3>
-                    <p>Бронирование отелей со скидками до 60%. Забронируйте номер по выгодной цене!</p>
-                    <a href="#" class="btn">Забронировать</a>
-                </div>
-                <div class="service-card" id="excursions">
-                    <h3>Экскурсии</h3>
-                    <p>Необычные экскурсии от местных жителей. 829 городов в 109 странах!</p>
-                    <a href="#" class="btn">Забронировать</a>
-                </div>
-                <div class="service-card" id="tours">
-                    <h3>Туры</h3>
-                    <p>Утомляет планирование отпуска? Пакетный тур — лучшее решение! Все виды отдыха.</p>
-                    <a href="#" class="btn">Забронировать</a>
-                </div>
-                <div class="service-card" id="transfers">
-                    <h3>Трансферы</h3>
-                    <p>Туристические или деловые трансферы в отели, виллы или любой адрес. 175 стран, 327 000 городов.</p>
-                    <a href="#" class="btn">Забронировать</a>
-                </div>
-                <div class="service-card" id="insurance">
-                    <h3>Страхование</h3>
-                    <p>Поиск по надёжным страховым компаниям. Подберите оптимальный вариант и не переплачивайте.</p>
-                    <a href="#" class="btn">Оформить</a>
-                </div>
-            </div>
-        </section>
+  <section class="popular-countries">
+    <h2>Популярные направления</h2>
+    <div class="countries-list">
+      <div class="country">Египет</div>
+      <div class="country">ОАЭ</div>
+      <div class="country">Таиланд</div>
+      <div class="country">Турция</div>
+      <div class="country">Мальдивы</div>
+      <div class="country">Вьетнам</div>
+      <div class="country">Шри-Ланка</div>
+      <div class="country">Индонезия</div>
+      <div class="country">Греция</div>
+    </div>
+  </section>
 
-        <section class="about-section" id="about">
-            <h2>Добро пожаловать...</h2>
-            <div class="about-text-wrapper">
-                <p>...на международный туристический агрегатор Travel Compass - универсальную платформу для бронирования самых популярных туристических услуг по всему миру! Мы предоставляем вам возможность выбрать лучшие предложения от проверенных поставщиков услуг и организовать поездку своей мечты всего за несколько кликов. Независимо от того, где вы хотите отдыхать или работать, мы гарантируем вам удобство, надежность и выгодные цены. На нашем сайте вы можете сравнить, выбрать и забронировать авиабилеты, отели, экскурсии, туры, туристическое страхование и трансферы (бронирование автомобилей).</p>
-                <div class="read-more-content">
-                    <p>Авиабилеты: идеальные рейсы по лучшим ценам. Наш агрегатор предлагает доступ к огромной базе авиабилетов на рейсы по всему миру. Мы сотрудничаем с крупнейшими международными авиакомпаниями, что позволяет вам выбирать из множества маршрутов и ценовых категорий. У нас вы найдете как бюджетные варианты для экономных путешественников, так и премиум-классы для тех, кто предпочитает комфорт. Простое и интуитивно понятное бронирование поможет вам сэкономить время и деньги, не тратя лишние усилия на поиск. Отели: комфорт для любого бюджета. Мы предоставляем широкий выбор отелей по всему миру, от уютных бюджетных гостиниц до роскошных курортов и 5-звездочных отелей. На нашем агрегаторе вы найдете варианты, которые идеально подойдут для деловых поездок, семейного отдыха или романтических путешествий. Вы можете выбирать отели по цене, удобствам, расположению и отзывам, чтобы найти наилучший вариант для вашего отдыха. Экскурсии и туры: откройте мир с нами. Мы предлагаем богатый выбор экскурсионных туров по самым популярным и экзотическим направлениям. Независимо от того, хотите ли вы познакомиться с историей и культурой города, исследовать природные чудеса или открыть для себя уникальные гастрономические традиции — у нас есть идеальные туры для любого вкуса. Выбирайте экскурсии с профессиональными гидами, чтобы максимально полно насладиться путешествием. Туристическое страхование: защита в любой ситуации. Не забывайте о своей безопасности в пути! Мы предлагаем различные виды туристического страхования, чтобы вы могли путешествовать с полным спокойствием. Покрытие от неотложной медицинской помощи, потери багажа, отмены рейсов и других непредвиденных ситуаций — мы предлагаем надежные страховые полисы для любого типа путешествий. Трансферы и другие услуги: удобство и забота о деталях. На нашем агрегаторе вы найдете удобные услуги трансфера — от встречи в аэропорту до комфортных поездок по городу. Забронируйте трансфер, чтобы не тратить время на поиск такси и наслаждаться комфортом с самого начала вашего путешествия. Почему наш агрегатор самый лучший? Широкий выбор поставщиков и услуг: Наш агрегатор включает только надежных поставщиков, что гарантирует вам качественные и проверенные предложения. Преимущества выбора: Благодаря множеству вариантов вы легко найдете оптимальные предложения по ценам и условиям. Удобный интерфейс: Легкое и быстрое бронирование позволяет вам планировать путешествия без лишних усилий. Гибкость и доступность: Мы предлагаем услуги для любого типа путешествий — будь то длительные туры, краткосрочные поездки, семейные каникулы или деловые поездки. Всегда пользуйтесь нашим туристическим агрегатором и начинайте путешествовать уже сегодня! Независимо от того, куда вас приведет путь — с нами ваше путешествие будет комфортным, выгодным и наполненным яркими впечатлениями. </p>
-                </div>
-                <button id="read-more-btn">Читать далее</button>
-            </div>
-        </section>
-        
-        <section class="stats-section" id="stats">
-            <h2>Топ стран по посещаемости нашего ресурса</h2>
-            <div class="stats-table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Страна</th>
-                            <th>Количество пользователей за 2025 год</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Страна 1</td>
-                            <td>XXX</td>
-                        </tr>
-                        <tr>
-                            <td>Страна 2</td>
-                            <td>XXX</td>
-                        </tr>
-                        <tr>
-                            <td>Страна 3</td>
-                            <td>XXX</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="total-users">2 793 000 пользователей за 2025 год</p>
-        </section>
-    </main>
+  <section class="reviews">
+    <h2>Отзывы наших клиентов</h2>
+    <div class="review-slider">
+      <div class="review">
+        <p>Nosrea Travel — это сервис, которому доверяешь! Менеджер помог выбрать идеальный отель в Египте для семьи. Всё прошло отлично!</p>
+        <span>Алина, Алматы</span>
+      </div>
+      <div class="review">
+        <p>Отдых в Турции был на высшем уровне, спасибо за профессионализм. Отдельно благодарю за поддержку через WhatsApp.</p>
+        <span>Дмитрий, Астана</span>
+      </div>
+      <div class="review">
+        <p>Мальдивы — мечта сбылась! Nosrea Travel — лучшие предложения и реальная экономия!</p>
+        <span>Елена, Шымкент</span>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <p>&copy; Travel Compass. Все права защищены.</p>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-
+  <footer>
+    <p>Nosrea Travel © 2025 | Алматы, Астана, Петропавловск</p>
+    <p>Юридический адрес: Республика Казахстан, Алматы, ул. Кабанбай батыра, 96</p>
+    <div class="cards">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+    </div>
+    <a href="mailto:info@nosreatravel.kz">Связаться по почте</a>
+  </footer>
 </body>
 </html>
