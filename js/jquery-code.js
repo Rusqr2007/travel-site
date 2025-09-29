@@ -1,16 +1,19 @@
 $(document).ready(function() {
-    // Анимация .fadeIn() для заголовков
-    $('h1, h2').hide().fadeIn(2000);
+  // Плавное появление секции hero
+  $(".hero").hide().fadeIn(1000);
 
-    // Обработка событий .hover() для галереи
-    $('.gallery-item').hover(
-        function() {
-            // Что делать при наведении курсора
-            $(this).css('box-shadow', '0 8px 16px rgba(0, 0, 0, 0.2)');
-        },
-        function() {
-            // Что делать, когда курсор уходит
-            $(this).css('box-shadow', '0 4px 8px rgba(0, 0, 0, 0.1)');
-        }
-    );
+  // Раскрытие описаний туров в таблице
+  $(".toggle-details").click(function() {
+    $(this).siblings(".details-content").slideToggle();
+  });
+
+  // Анимация при наведении на ссылки меню
+  $(".nav-link").hover(
+    function() {
+      $(this).css("color", "#0066ff");
+    },
+    function() {
+      $(this).css("color", "");
+    }
+  );
 });
